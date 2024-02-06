@@ -1,0 +1,280 @@
+// RESET CSS
+button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+a {color: #fff; text-decoration: none; outline: none}
+a:hover, a:active {text-decoration: none; color:#fff;}
+
+
+body {
+  background: #000;
+}
+// POPUP
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #fff;
+  width: 330px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  .popup_img {
+    width: 100%;
+    height: auto;
+  }
+  .popup-btn-area {
+    display: flex;
+    .btn {
+      padding: 10px 15px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      width: 50%;
+      &:last-child {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+}
+
+
+
+#popup1[data-popup-state="hidden"] {
+  display: none;
+}
+
+#popup2[data-popup-state="hidden"] {
+  display: none;
+}
+
+// MAIN CONTAINER
+.main-container {
+  .img-content {
+    margin-bottom: 90px;
+    text-align: center;
+    .iimg {
+      width: 100%;
+    }
+  }
+}
+
+// SCROLLTOTOP AREA
+.scrollToTopBtn {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+  display: flex;
+  padding: 12.5px 10px;
+  .top-arrow-icon {
+    width: 100%;
+  }
+  @media(max-width: 992px) {
+    display: none;
+  }
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// MOBILE BTN SHOW CSS
+.btm-btn-area {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  background: black; // color ch
+  display: none;
+  @media(max-width:992px) {
+    display: block;
+  }
+  .btm--btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    .btn-area {
+      width: 24%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon {
+          width: 35px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+        .sub-text {
+          text-align: center;
+        }
+      }
+      .messageBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon {
+          width: 35px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+        .sub-text {
+          font-size: 16px;
+          color: white;
+          text-align: center;
+        }
+      }
+      .modalBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon {
+          width: 35px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+        .sub-text {
+          font-size: 16px;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+// Modal CSS
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #2d2d2d;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  transform: translate(-50%, -50%);
+  .modal_totle {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .form-area {
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    input {
+      color: black;
+    }
+    .submit-input {
+      margin-top: 20px;
+      padding: 6px 15px;
+    }
+    .notice {
+      color: #ff5252;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+    .success_box {
+      z-index: 9999;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      width: 80%;
+      height: auto;
+      background: rgb(255, 255, 255);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); 
+      padding: 30px 15px 30px 15px;
+      border: solid #48cf3791 3px;
+      border-radius: 20px;
+      .in_house_css {
+        
+        .sue-text2 {
+          color: #000;
+          font-weight: bold;
+          text-align: center;
+          font-size: 16px;
+        }
+        .sue-text3 {
+          color: #000;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.margin-botton {
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sue-text {
+  margin-top: 10px;
+}
+
+
+.area {
+  width: 1000px;
+  margin: 0 auto;
+  .area_a {
+    display: flex;
+    flex-direction: column;
+    .top_text {
+      color: #5bb9a4;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
